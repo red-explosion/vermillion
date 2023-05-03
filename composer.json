@@ -28,6 +28,7 @@
     },
     "scripts": {
         "lint": "./vendor/bin/pint --config vendor/red-explosion/pint-config/pint.json",
+        "analyse": "./vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --compact"
     },
     "require-dev": {
