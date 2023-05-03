@@ -41,9 +41,9 @@ composer install red-explosion/vermillion
 
 ## Configuration
 
-First, ensure that `RedExplosion\Vermillion\VersioningServiceProvider` is registered in your app. Sometimes it's automatic (via package discovery), sometimes it's not, so please double-check your app configuration.
+First, ensure that `RedExplosion\Vermillion\VermillionServiceProvider` is registered in your app. Sometimes it's automatic (via package discovery), sometimes it's not, so please double-check your app configuration.
 
-Run this to generate a copy of the versioning config:
+Run this to generate a copy of the vermillion config:
 
 ```
 php artisan vendor:publish
@@ -273,7 +273,7 @@ return [
 ```php
 <?php
 
-// config/versioning.php
+// config/vermillion.php
 
 return [
   'normalizer' => App\Http\Versioning\MyCustomNormalizer::class,

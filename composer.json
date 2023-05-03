@@ -44,7 +44,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RedExplosion\\Vermillion\\VersioningServiceProvider"
+                "RedExplosion\\Vermillion\\VermillionServiceProvider"
             ]
         }
     }

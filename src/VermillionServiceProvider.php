@@ -24,7 +24,7 @@ use RedExplosion\Vermillion\Schemes\VersioningScheme;
  *
  * @package RedExplosion\Vermillion
  */
-class VersioningServiceProvider extends ServiceProvider
+class VermillionServiceProvider extends ServiceProvider
 {
     /**
      * @return void
@@ -32,7 +32,7 @@ class VersioningServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/versioning.php' => config_path('versioning.php'),
+            __DIR__ . '/../config/vermillion.php' => config_path('versioning.php'),
         ]);
         $scheme = $this->app->make(VersioningScheme::class);
         $scheme->boot($this->app->make(VersioningManager::class));
@@ -41,8 +41,8 @@ class VersioningServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            path: __DIR__ . '/../config/versioning.php',
-            key: 'versioning',
+            path: __DIR__ . '/../config/vermillion.php',
+            key: 'vermillion',
         );
 
         $this->configureCoreVersioningServices();
@@ -52,7 +52,7 @@ class VersioningServiceProvider extends ServiceProvider
     private function configureCoreVersioningServices(): void
     {
         $this->app->singleton(VersionNormalizer::class, function () {
-            $format = (string) config('versioning.format', 'major');
+            $format = (string) config('vermillion.format', 'major');
             return match($format) {
                 'major', 'numeric', '' => new NumericVersionNormalizer(),
                 'date' => new DateVersionNormalizer(),
@@ -61,12 +61,12 @@ class VersioningServiceProvider extends ServiceProvider
         });
 
         $this->app->singleton(VersioningScheme::class, function () {
-            $scheme = (string) config('versioning.scheme', 'url_prefix');
+            $scheme = (string) config('vermillion.scheme', 'url_prefix');
             return match ($scheme) {
                 'url_prefix' => new UrlPrefixScheme(),
                 'header' => new HeaderScheme(
-                    (string) config('versioning.schemes.header.name'),
-                    config('versioning.schemes.header.require_header') ?? true,
+                    (string) config('vermillion.schemes.header.name'),
+                    config('vermillion.schemes.header.require_header') ?? true,
                 ),
                 default => $this->app->make($scheme),
             };
@@ -78,10 +78,10 @@ class VersioningServiceProvider extends ServiceProvider
             return new VersioningManager(
                 $normalizer,
                 $scheme,
-                config('versioning.latest', '1'),
-                config('versioning.min', '1'),
-                config('versioning.latest', '1'),
-                config('versioning.max', '2')
+                config('vermillion.latest', '1'),
+                config('vermillion.min', '1'),
+                config('vermillion.latest', '1'),
+                config('vermillion.max', '2')
             );
         });
 
@@ -105,10 +105,7 @@ class VersioningServiceProvider extends ServiceProvider
         // Helper method that can be used in route files to grab
         Router::macro('versioning', fn () => $app->make(RoutingHelper::class));
 
-        Router::macro('versioned', function () use ($app) {
-            // @phpstan-ignore-next-line
-            return $app->make(VersioningScheme::class)->router($this);
-        });
+        Router::macro('versioned', fn () => $app->make(VersioningScheme::class)->router($this));
 
         Router::macro('unsupported', function () {
             // @phpstan-ignore-next-line

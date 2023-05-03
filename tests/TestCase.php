@@ -8,14 +8,14 @@ use Illuminate\Routing\Router;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RedExplosion\Vermillion\Tests\fixtures\MembersController;
 use RedExplosion\Vermillion\Tests\fixtures\UsersController;
-use RedExplosion\Vermillion\VersioningServiceProvider;
+use RedExplosion\Vermillion\VermillionServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
     protected function getPackageProviders($app): array
     {
         return [
-            VersioningServiceProvider::class,
+            VermillionServiceProvider::class,
         ];
     }
 
