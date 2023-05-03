@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace RedExplosion\Vermillion\Tests;
 
+use Illuminate\Config\Repository;
 use Illuminate\Routing\Router;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RedExplosion\Vermillion\Tests\fixtures\MembersController;
@@ -17,6 +18,14 @@ abstract class TestCase extends Orchestra
         return [
             VermillionServiceProvider::class,
         ];
+    }
+
+    protected function defineEnvironment($app): void
+    {
+        tap($app->make('config'), function (Repository $config): void {
+            $config->set('vermillion.latest', 't');
+            $config->set('vermillion.max', '7');
+        });
     }
 
     protected function defineRoutes($router): void

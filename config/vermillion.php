@@ -20,12 +20,12 @@ return [
      * This will be the default version set when no version was activated via the selected API scheme e.g.
      * when generating routes from controllers that aren't versioned, it will generate them with the latest version.
      */
-    'latest' => '6',
+    'latest' => '1',
 
     /**
      * The maximum API version ever available. Any routes requested with version greater than this will 404.
      */
-    'max' => '7',
+    'max' => '1',
 
     /**
      * The API versioning scheme to use. Supported schemes out of the box:

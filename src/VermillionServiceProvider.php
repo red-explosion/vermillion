@@ -26,14 +26,14 @@ use RedExplosion\Vermillion\Schemes\VersioningScheme;
  */
 class VermillionServiceProvider extends ServiceProvider
 {
-    /**
-     * @return void
-     */
     public function boot(): void
     {
-        $this->publishes([
-            __DIR__ . '/../config/vermillion.php' => config_path('versioning.php'),
-        ]);
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../config/vermillion.php' => config_path('vermillion.php'),
+            ]);
+        }
+
         $scheme = $this->app->make(VersioningScheme::class);
         $scheme->boot($this->app->make(VersioningManager::class));
     }
@@ -81,7 +81,7 @@ class VermillionServiceProvider extends ServiceProvider
                 config('vermillion.latest', '1'),
                 config('vermillion.min', '1'),
                 config('vermillion.latest', '1'),
-                config('vermillion.max', '2')
+                config('vermillion.max', '1')
             );
         });
 
