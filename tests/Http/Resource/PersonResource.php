@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\Http\Resource;
+namespace RedExplosion\Vermillion\Tests\Http\Resource;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Square\Vermillion\Traits\JsonResource\WithReverseMigrations;
-use Square\Vermillion\VersionedSet;
+use RedExplosion\Vermillion\Traits\JsonResource\WithReverseMigrations;
+use RedExplosion\Vermillion\VersionedSet;
 
 class PersonResource extends JsonResource
 {

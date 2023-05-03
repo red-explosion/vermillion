@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\fixtures;
+namespace RedExplosion\Vermillion\Tests\fixtures;
 
 use Illuminate\Http\Request;
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Formats\Numeric\NumericVersion;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\Formats\Numeric\NumericVersion;
 
 final class UsersController
 {

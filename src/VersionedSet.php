@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion;
+namespace RedExplosion\Vermillion;
 
-use Square\Vermillion\Exceptions\NoMatchFoundException;
-use Square\Vermillion\Exceptions\UnknownVersionException;
+use RedExplosion\Vermillion\Exceptions\NoMatchFoundException;
+use RedExplosion\Vermillion\Exceptions\UnknownVersionException;
 
 class VersionedSet
 {

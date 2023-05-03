@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion;
+namespace RedExplosion\Vermillion;
 
 use Closure;
 use Illuminate\Events\Dispatcher;
@@ -10,19 +10,19 @@ use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use ReflectionClass;
-use Square\Vermillion\Formats\Date\DateNormalizer as DateVersionNormalizer;
-use Square\Vermillion\Formats\Numeric\NumericNormalizer as NumericVersionNormalizer;
-use Square\Vermillion\Formats\VersionNormalizer;
-use Square\Vermillion\Routing\ApiVersioningSubscriber;
-use Square\Vermillion\Routing\RoutingHelper;
-use Square\Vermillion\Schemes\Header\HeaderScheme;
-use Square\Vermillion\Schemes\UrlPrefix\UrlPrefixScheme;
-use Square\Vermillion\Schemes\VersioningScheme;
+use RedExplosion\Vermillion\Formats\Date\DateNormalizer as DateVersionNormalizer;
+use RedExplosion\Vermillion\Formats\Numeric\NumericNormalizer as NumericVersionNormalizer;
+use RedExplosion\Vermillion\Formats\VersionNormalizer;
+use RedExplosion\Vermillion\Routing\ApiVersioningSubscriber;
+use RedExplosion\Vermillion\Routing\RoutingHelper;
+use RedExplosion\Vermillion\Schemes\Header\HeaderScheme;
+use RedExplosion\Vermillion\Schemes\UrlPrefix\UrlPrefixScheme;
+use RedExplosion\Vermillion\Schemes\VersioningScheme;
 
 /**
  * Boostrap API versioning package
  *
- * @package Square\Vermillion
+ * @package RedExplosion\Vermillion
  */
 class VersioningServiceProvider extends ServiceProvider
 {

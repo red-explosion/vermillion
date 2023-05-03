@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\Formats\Date;
+namespace RedExplosion\Vermillion\Tests\Formats\Date;
 
-use Square\Vermillion\Formats\Date\DateVersion;
-use Square\Vermillion\Formats\Date\DateNormalizer;
-use Square\Vermillion\Tests\Formats\FormatTestAbstract;
-use Square\Vermillion\Formats\VersionNormalizer;
+use RedExplosion\Vermillion\Formats\Date\DateVersion;
+use RedExplosion\Vermillion\Formats\Date\DateNormalizer;
+use RedExplosion\Vermillion\Tests\Formats\FormatTestAbstract;
+use RedExplosion\Vermillion\Formats\VersionNormalizer;
 
 class ApiVersionTest extends FormatTestAbstract
 {

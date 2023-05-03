@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\PHPStan\MethodReflections;
+namespace RedExplosion\Vermillion\PHPStan\MethodReflections;
 
 use PHPStan\Reflection\ParametersAcceptor;
 use PHPStan\Type\Generic\TemplateTypeMap;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
-use Square\Vermillion\Routing\RoutingHelper;
+use RedExplosion\Vermillion\Routing\RoutingHelper;
 
 class RouterVersioningParametersAcceptor implements ParametersAcceptor
 {

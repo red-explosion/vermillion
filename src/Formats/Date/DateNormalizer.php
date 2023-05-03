@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Formats\Date;
+namespace RedExplosion\Vermillion\Formats\Date;
 
 use DateTime;
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Exceptions\BadVersionFormatException;
-use Square\Vermillion\Formats\VersionComparator;
-use Square\Vermillion\Formats\VersionNormalizer;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\Exceptions\BadVersionFormatException;
+use RedExplosion\Vermillion\Formats\VersionComparator;
+use RedExplosion\Vermillion\Formats\VersionNormalizer;
 
 /**
  * Class VersionNormalizer
  *
- * @package Square\Vermillion\Formats\Date
+ * @package RedExplosion\Vermillion\Formats\Date
  */
 class DateNormalizer implements VersionNormalizer
 {

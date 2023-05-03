@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\Http\Resource;
+namespace RedExplosion\Vermillion\Tests\Http\Resource;
 
 use Illuminate\Container\Container;
 use Illuminate\Http\Request;
-use Square\Vermillion\Formats\Numeric\NumericNormalizer;
-use Square\Vermillion\Schemes\Header\HeaderScheme;
-use Square\Vermillion\Tests\TestCase;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\Formats\Numeric\NumericNormalizer;
+use RedExplosion\Vermillion\Schemes\Header\HeaderScheme;
+use RedExplosion\Vermillion\Tests\TestCase;
+use RedExplosion\Vermillion\VersioningManager;
 use JsonException;
 
 class JsonResourceTest extends TestCase

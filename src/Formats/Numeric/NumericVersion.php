@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Formats\Numeric;
+namespace RedExplosion\Vermillion\Formats\Numeric;
 
-use Square\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\ApiVersion;
 
 /**
  * Versioning format where version numbers are straight-up integers. Think, "Major versions only."
  *
- * @package Square\Vermillion\Formats\Numeric
+ * @package RedExplosion\Vermillion\Formats\Numeric
  */
 class NumericVersion extends ApiVersion
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion;
+namespace RedExplosion\Vermillion;
 
-use Square\Vermillion\Exceptions\UnknownVersionException;
-use Square\Vermillion\Formats\VersionNormalizer;
-use Square\Vermillion\Schemes\VersioningScheme;
+use RedExplosion\Vermillion\Exceptions\UnknownVersionException;
+use RedExplosion\Vermillion\Formats\VersionNormalizer;
+use RedExplosion\Vermillion\Schemes\VersioningScheme;
 
 /**
  * Class ApiVersion

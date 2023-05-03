@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\VersionedSet;
+namespace RedExplosion\Vermillion\Tests\VersionedSet;
 
-use Square\Vermillion\Exceptions\UnknownVersionException;
-use Square\Vermillion\Formats\Numeric\NumericNormalizer;
-use Square\Vermillion\Schemes\Header\HeaderScheme;
-use Square\Vermillion\Tests\TestCase;
-use Square\Vermillion\VersionedSet;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\Exceptions\UnknownVersionException;
+use RedExplosion\Vermillion\Formats\Numeric\NumericNormalizer;
+use RedExplosion\Vermillion\Schemes\Header\HeaderScheme;
+use RedExplosion\Vermillion\Tests\TestCase;
+use RedExplosion\Vermillion\VersionedSet;
+use RedExplosion\Vermillion\VersioningManager;
 
 class ResolveTest extends TestCase
 {

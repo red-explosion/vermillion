@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests;
+namespace RedExplosion\Vermillion\Tests;
 
 use Illuminate\Routing\Router;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Square\Vermillion\Tests\fixtures\MembersController;
-use Square\Vermillion\Tests\fixtures\UsersController;
-use Square\Vermillion\VersioningServiceProvider;
+use RedExplosion\Vermillion\Tests\fixtures\MembersController;
+use RedExplosion\Vermillion\Tests\fixtures\UsersController;
+use RedExplosion\Vermillion\VersioningServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

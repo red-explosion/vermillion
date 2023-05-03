@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Formats;
+namespace RedExplosion\Vermillion\Formats;
 
-use Square\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\ApiVersion;
 
 /**
  * Interface VersionNormalizer
  *
- * @package Square\Vermillion
+ * @package RedExplosion\Vermillion
  */
 interface VersionNormalizer
 {

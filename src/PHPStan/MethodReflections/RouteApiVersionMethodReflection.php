@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\PHPStan\MethodReflections;
+namespace RedExplosion\Vermillion\PHPStan\MethodReflections;
 
 use Illuminate\Routing\Route;
 use PHPStan\Reflection\ClassMemberReflection;
@@ -12,7 +12,7 @@ use PHPStan\Reflection\ParameterReflection;
 use PHPStan\TrinaryLogic;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
-use Square\Vermillion\PHPStan\ClassMemberReflection as VersioningClassMemberReflection;
+use RedExplosion\Vermillion\PHPStan\ClassMemberReflection as VersioningClassMemberReflection;
 
 class RouteApiVersionMethodReflection implements MethodReflection
 {

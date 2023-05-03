@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\Formats;
+namespace RedExplosion\Vermillion\Tests\Formats;
 
-use Square\Vermillion\Exceptions\BadVersionFormatException;
-use Square\Vermillion\Formats\VersionNormalizer;
-use Square\Vermillion\ApiVersion as ApiVersionAbstract;
-use Square\Vermillion\Tests\TestCase;
+use RedExplosion\Vermillion\Exceptions\BadVersionFormatException;
+use RedExplosion\Vermillion\Formats\VersionNormalizer;
+use RedExplosion\Vermillion\ApiVersion as ApiVersionAbstract;
+use RedExplosion\Vermillion\Tests\TestCase;
 
 abstract class FormatTestAbstract extends TestCase
 {

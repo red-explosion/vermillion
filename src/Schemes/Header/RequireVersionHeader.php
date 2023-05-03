@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Schemes\Header;
+namespace RedExplosion\Vermillion\Schemes\Header;
 
 use Illuminate\Http\Request;
-use Square\Vermillion\Exceptions\VersionMissingException;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\Exceptions\VersionMissingException;
+use RedExplosion\Vermillion\VersioningManager;
 
 class RequireVersionHeader
 {

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Formats\Numeric;
+namespace RedExplosion\Vermillion\Formats\Numeric;
 
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Exceptions\BadVersionFormatException;
-use Square\Vermillion\Formats\VersionNormalizer;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\Exceptions\BadVersionFormatException;
+use RedExplosion\Vermillion\Formats\VersionNormalizer;
 
 /**
  * Class Normalizer
  *
- * @package Square\Vermillion\Formats\Numeric
+ * @package RedExplosion\Vermillion\Formats\Numeric
  */
 class NumericNormalizer implements VersionNormalizer
 {

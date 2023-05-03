@@ -41,7 +41,7 @@ composer install square/vermillion
 
 ## Configuration
 
-First, ensure that `Square\Vermillion\VersioningServiceProvider` is registered in your app. Sometimes it's automatic (via package discovery), sometimes it's not, so please double-check your app configuration.
+First, ensure that `RedExplosion\Vermillion\VersioningServiceProvider` is registered in your app. Sometimes it's automatic (via package discovery), sometimes it's not, so please double-check your app configuration.
 
 Run this to generate a copy of the versioning config:
 
@@ -126,7 +126,7 @@ route('users.list', ['apiVersion' => '4']); #=> /api/v4/users
 
 ### `ApiVersion` service
 
-You can specify `Square\Vermillion\ApiVersion` as a dependency and you will get a reference to the current active (or latest) API version object:
+You can specify `RedExplosion\Vermillion\ApiVersion` as a dependency and you will get a reference to the current active (or latest) API version object:
 
 ```php
 
@@ -153,11 +153,11 @@ class InfoController
 }
 ```
 
-**NOTE: You need to type-hint the `Square\Vermillion\ApiVersion` abstract, NOT any of concrete implementations in `Square\Vermillion\Formats\*` namespace!**
+**NOTE: You need to type-hint the `RedExplosion\Vermillion\ApiVersion` abstract, NOT any of concrete implementations in `RedExplosion\Vermillion\Formats\*` namespace!**
 
 ### Versioning API responses
 
-You can use the `Square\Vermillion\Traits\JsonResource\WithReverseMigrations` trait to support Stripe-like data versioning via "reverse migrations":
+You can use the `RedExplosion\Vermillion\Traits\JsonResource\WithReverseMigrations` trait to support Stripe-like data versioning via "reverse migrations":
 
 ```php
 
@@ -224,7 +224,7 @@ This manifests as a `MissingVersionException` thrown, which you will want to ren
 
 namespace App\Exceptions;
 
-use Square\Vermillion\Exceptions\VersionMissingException;
+use RedExplosion\Vermillion\Exceptions\VersionMissingException;
 
 class Handler extends ExceptionHandler
 {
@@ -247,7 +247,7 @@ class Handler extends ExceptionHandler
 
 ### Using your own custom versioning scheme
 
-If you need to determine the API version to use given an HTTP request, you will need to write your own scheme by implementing `Square\Vermillion\VersioningScheme` contract.
+If you need to determine the API version to use given an HTTP request, you will need to write your own scheme by implementing `RedExplosion\Vermillion\VersioningScheme` contract.
 
 Specify your custom versioning scheme's FQCN in the `versioning` configuration:
 
@@ -264,9 +264,9 @@ return [
 
 ### Using your own custom version format
 
-1. You can implement your own versioning format e.g. SemVer by extending the `Square\Vermillion\ApiVersion` abstract. All that is required for your new `ApiVersion` type is to provide an integer representation of your version strings. This is used by the library to compute the ordinality between versions, which is what is all that is needed for everything to work.
+1. You can implement your own versioning format e.g. SemVer by extending the `RedExplosion\Vermillion\ApiVersion` abstract. All that is required for your new `ApiVersion` type is to provide an integer representation of your version strings. This is used by the library to compute the ordinality between versions, which is what is all that is needed for everything to work.
 
-2. You will need to implement a `Square\Vermillion\VersionNormalizer` class that is responsible for converting a version string to an instance of your custom `ApiVersion` sub-class. It MUST support your custom version strings as input, _as well as the custom `ApiVersion` sub-class_. It MUST throw `BadVersionFormatException` if it is provided an input that it cannot convert into a valid `ApiVersion` for according to your custom version format spec.
+2. You will need to implement a `RedExplosion\Vermillion\VersionNormalizer` class that is responsible for converting a version string to an instance of your custom `ApiVersion` sub-class. It MUST support your custom version strings as input, _as well as the custom `ApiVersion` sub-class_. It MUST throw `BadVersionFormatException` if it is provided an input that it cannot convert into a valid `ApiVersion` for according to your custom version format spec.
 
 3. Specify the FQCN of your normalizer as `versioning.normalizer` config value e.g.
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\fixtures;
+namespace RedExplosion\Vermillion\Tests\fixtures;
 
 use Illuminate\Http\Response;
 

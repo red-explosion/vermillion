@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\VersionedSet;
+namespace RedExplosion\Vermillion\Tests\VersionedSet;
 
-use Square\Vermillion\Formats\Numeric\NumericNormalizer;
-use Square\Vermillion\Tests\TestCase;
-use Square\Vermillion\VersionedItem;
+use RedExplosion\Vermillion\Formats\Numeric\NumericNormalizer;
+use RedExplosion\Vermillion\Tests\TestCase;
+use RedExplosion\Vermillion\VersionedItem;
 use stdClass;
 
 class VersionedItemTest extends TestCase

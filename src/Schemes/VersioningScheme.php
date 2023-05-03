@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Schemes;
+namespace RedExplosion\Vermillion\Schemes;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Routing\Router;
 use Illuminate\Routing\RouteRegistrar;
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\VersioningManager;
 
 /**
  * Interface VersioningScheme
  *
- * @package Square\Vermillion\Schemes
+ * @package RedExplosion\Vermillion\Schemes
  */
 interface VersioningScheme
 {

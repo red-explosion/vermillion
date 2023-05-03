@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\PHPStan;
+namespace RedExplosion\Vermillion\PHPStan;
 
 use Illuminate\Support\Facades\Route as RouteFacade;
 use PHPStan\Reflection\ClassReflection;
 use PHPStan\Reflection\MethodReflection;
 use PHPStan\Reflection\MethodsClassReflectionExtension;
-use Square\Vermillion\PHPStan\MethodReflections\RouteFacadeVersionedMethodReflection;
+use RedExplosion\Vermillion\PHPStan\MethodReflections\RouteFacadeVersionedMethodReflection;
 
 class RouteFacadeMethodsReflectionExtension implements MethodsClassReflectionExtension
 {

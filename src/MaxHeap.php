@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion;
+namespace RedExplosion\Vermillion;
 
 use InvalidArgumentException;
 use SplMaxHeap;

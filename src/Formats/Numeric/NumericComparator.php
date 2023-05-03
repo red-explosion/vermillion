@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Formats\Numeric;
+namespace RedExplosion\Vermillion\Formats\Numeric;
 
-use Square\Vermillion\ApiVersion as BaseApiVersion;
-use Square\Vermillion\Exceptions\VersioningException;
-use Square\Vermillion\Formats\VersionComparator;
+use RedExplosion\Vermillion\ApiVersion as BaseApiVersion;
+use RedExplosion\Vermillion\Exceptions\VersioningException;
+use RedExplosion\Vermillion\Formats\VersionComparator;
 
 class NumericComparator implements VersionComparator
 {

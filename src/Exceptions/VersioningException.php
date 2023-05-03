@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Exceptions;
+namespace RedExplosion\Vermillion\Exceptions;
 
 use RuntimeException;
 
 /**
  * Base exception used by this package.
  *
- * @package Square\Vermillion\Exception
+ * @package RedExplosion\Vermillion\Exception
  */
 class VersioningException extends RuntimeException
 {

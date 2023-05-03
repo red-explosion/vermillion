@@ -25,7 +25,6 @@ jobs:
       with:
         path: |
           ./vendor
-          ./integration-tests/**/vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Schemes\UrlPrefix;
+namespace RedExplosion\Vermillion\Schemes\UrlPrefix;
 
 use Illuminate\Contracts\Routing\UrlGenerator as UrlGeneratorContract;
 use Illuminate\Http\Request;
@@ -11,14 +11,14 @@ use Illuminate\Routing\Router;
 use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Routing\UrlGenerator;
 use RuntimeException;
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Schemes\VersioningScheme;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\Schemes\VersioningScheme;
+use RedExplosion\Vermillion\VersioningManager;
 
 /**
  * Class UrlPrefixScheme
  *
- * @package Square\Vermillion\Schemes
+ * @package RedExplosion\Vermillion\Schemes
  */
 class UrlPrefixScheme implements VersioningScheme
 {

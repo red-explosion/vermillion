@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Formats\Date;
+namespace RedExplosion\Vermillion\Formats\Date;
 
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Formats\VersionNormalizer;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\Formats\VersionNormalizer;
 
 /**
  * Class ApiVersion
  *
- * @package Square\Vermillion\Formats\Date
+ * @package RedExplosion\Vermillion\Formats\Date
  */
 class DateVersion extends ApiVersion
 {

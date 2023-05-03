@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Routing;
+namespace RedExplosion\Vermillion\Routing;
 
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Container\Container;
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Exceptions\NoMatchFoundException;
-use Square\Vermillion\Exceptions\VersioningException;
-use Square\Vermillion\VersionedSet;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\Exceptions\NoMatchFoundException;
+use RedExplosion\Vermillion\Exceptions\VersioningException;
+use RedExplosion\Vermillion\VersionedSet;
+use RedExplosion\Vermillion\VersioningManager;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Routing\Events\RouteMatched;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -19,7 +19,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * Perform API version-related operations based on route events e.g. detecting current version & dispatching requests
  * to versioned controllers.
  *
- * @package Square\Vermillion\Routing
+ * @package RedExplosion\Vermillion\Routing
  */
 class ApiVersioningSubscriber
 {

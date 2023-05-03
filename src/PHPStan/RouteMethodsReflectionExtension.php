@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\PHPStan;
+namespace RedExplosion\Vermillion\PHPStan;
 
 use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
@@ -12,7 +12,7 @@ use PHPStan\Reflection\MethodReflection;
 use PHPStan\Reflection\MethodsClassReflectionExtension;
 use PHPStan\Reflection\MissingMethodFromReflectionException;
 use PHPStan\Reflection\ReflectionProvider;
-use Square\Vermillion\PHPStan\MethodReflections\RouteApiVersionMethodReflection;
+use RedExplosion\Vermillion\PHPStan\MethodReflections\RouteApiVersionMethodReflection;
 
 class RouteMethodsReflectionExtension implements MethodsClassReflectionExtension
 {

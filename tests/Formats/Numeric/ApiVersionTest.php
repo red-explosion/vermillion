@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\Formats\Numeric;
+namespace RedExplosion\Vermillion\Tests\Formats\Numeric;
 
-use Square\Vermillion\Formats\Numeric\NumericVersion;
-use Square\Vermillion\Formats\Numeric\NumericNormalizer;
-use Square\Vermillion\Tests\Formats\FormatTestAbstract;
-use Square\Vermillion\Formats\VersionNormalizer;
+use RedExplosion\Vermillion\Formats\Numeric\NumericVersion;
+use RedExplosion\Vermillion\Formats\Numeric\NumericNormalizer;
+use RedExplosion\Vermillion\Tests\Formats\FormatTestAbstract;
+use RedExplosion\Vermillion\Formats\VersionNormalizer;
 
 class ApiVersionTest extends FormatTestAbstract
 {

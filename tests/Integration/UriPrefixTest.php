@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Tests\Integration;
+namespace RedExplosion\Vermillion\Tests\Integration;
 
-use Square\Vermillion\Tests\TestCase;
+use RedExplosion\Vermillion\Tests\TestCase;
 
 class UriPrefixTest extends TestCase
 {

@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Schemes\Header;
+namespace RedExplosion\Vermillion\Schemes\Header;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Routing\Router;
 use Illuminate\Routing\RouteRegistrar;
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Schemes\VersioningScheme;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\Schemes\VersioningScheme;
+use RedExplosion\Vermillion\VersioningManager;
 
 /**
  * Class HeaderVersioningScheme
  *
- * @package Square\Vermillion\Schemes
+ * @package RedExplosion\Vermillion\Schemes
  */
 class HeaderScheme implements VersioningScheme
 {

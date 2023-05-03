@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\PHPStan;
+namespace RedExplosion\Vermillion\PHPStan;
 
 use PHPStan\Reflection\ClassMemberReflection as ClassMemberReflectionContract;
 use PHPStan\Reflection\ClassReflection;

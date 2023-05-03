@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Formats\Date;
+namespace RedExplosion\Vermillion\Formats\Date;
 
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Exceptions\VersioningException;
-use Square\Vermillion\Formats\VersionComparator;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\Exceptions\VersioningException;
+use RedExplosion\Vermillion\Formats\VersionComparator;
 
 class DateComparator implements VersionComparator
 {

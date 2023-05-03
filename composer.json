@@ -1,5 +1,5 @@
 {
-    "name": "square/vermillion",
+    "name": "red-explosion/vermillion",
     "description": "API Versioning tools for Laravel apps",
     "type": "library",
     "license": "Apache-2.0",
@@ -7,16 +7,20 @@
         {
             "name": "Bezalel Hermoso",
             "email": "bezalel@squareup.com"
+        },
+        {
+            "name": "Ben Sherred",
+            "email": "ben@sherred.co.uk"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Square\\Vermillion\\": "src/"
+            "RedExplosion\\Vermillion\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Square\\Vermillion\\Tests\\": "tests/"
+            "RedExplosion\\Vermillion\\Tests\\": "tests/"
         }
     },
     "require": {
@@ -29,7 +33,7 @@
     "scripts": {
         "lint": "./vendor/bin/pint --config vendor/red-explosion/pint-config/pint.json",
         "analyse": "./vendor/bin/phpstan analyse",
-        "test": "./vendor/bin/pest --compact"
+        "test": "./vendor/bin/phpunit tests"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.9",
@@ -40,7 +44,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Square\\Vermillion\\VersioningServiceProvider"
+                "RedExplosion\\Vermillion\\VersioningServiceProvider"
             ]
         }
     }

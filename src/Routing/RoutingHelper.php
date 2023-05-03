@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Routing;
+namespace RedExplosion\Vermillion\Routing;
 
 use Closure;
 use Illuminate\Http\Response;
-use Square\Vermillion\ApiVersion;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\ApiVersion;
+use RedExplosion\Vermillion\VersioningManager;
 
 /**
  * Registered to Router::versioning() macro.
  *
  * Usable in route files e.g. $router->versioning()->latest(), $router->versioning()->max(), etc.
  *
- * @package Square\Vermillion\Routing
+ * @package RedExplosion\Vermillion\Routing
  */
 class RoutingHelper
 {

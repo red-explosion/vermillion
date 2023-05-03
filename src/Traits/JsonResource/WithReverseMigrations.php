@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Square\Vermillion\Traits\JsonResource;
+namespace RedExplosion\Vermillion\Traits\JsonResource;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use RuntimeException;
-use Square\Vermillion\VersionedSet;
-use Square\Vermillion\VersioningManager;
+use RedExplosion\Vermillion\VersionedSet;
+use RedExplosion\Vermillion\VersioningManager;
 
 trait WithReverseMigrations
 {
