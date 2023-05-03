@@ -23,7 +23,7 @@ abstract class TestCase extends Orchestra
     protected function defineEnvironment($app): void
     {
         tap($app->make('config'), function (Repository $config): void {
-            $config->set('vermillion.latest', 't');
+            $config->set('vermillion.latest', '6');
             $config->set('vermillion.max', '7');
         });
     }
