@@ -2,9 +2,9 @@
 
 namespace Square\Vermillion\Tests\VersionedSet;
 
-use PHPUnit\Framework\TestCase;
 use Square\Vermillion\Formats\Numeric\NumericVersion;
 use Square\Vermillion\Formats\Numeric\NumericNormalizer;
+use Square\Vermillion\Tests\TestCase;
 use Square\Vermillion\VersionedItem;
 
 class VersionedItemTest extends TestCase

@@ -2,10 +2,10 @@
 
 namespace Square\Vermillion\Tests\Formats;
 
-use PHPUnit\Framework\TestCase;
 use Square\Vermillion\Exceptions\BadVersionFormatException;
 use Square\Vermillion\Formats\VersionNormalizer;
 use Square\Vermillion\ApiVersion as ApiVersionAbstract;
+use Square\Vermillion\Tests\TestCase;
 
 abstract class FormatTestAbstract extends TestCase
 {

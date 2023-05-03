@@ -2,11 +2,11 @@
 
 namespace Square\Vermillion\Tests\VersionedSet;
 
-use PHPUnit\Framework\TestCase;
 use Square\Vermillion\ApiVersion;
 use Square\Vermillion\Exceptions\UnknownVersionException;
 use Square\Vermillion\Formats\Numeric\NumericNormalizer;
 use Square\Vermillion\Schemes\Header\HeaderScheme;
+use Square\Vermillion\Tests\TestCase;
 use Square\Vermillion\VersionedSet;
 use Square\Vermillion\Schemes\VersioningScheme;
 use Square\Vermillion\VersioningManager;

@@ -4,9 +4,9 @@ namespace Square\Vermillion\Tests\Http\Resource;
 
 use Illuminate\Container\Container;
 use Illuminate\Http\Request;
-use PHPUnit\Framework\TestCase;
 use Square\Vermillion\Formats\Numeric\NumericNormalizer;
 use Square\Vermillion\Schemes\Header\HeaderScheme;
+use Square\Vermillion\Tests\TestCase;
 use Square\Vermillion\VersioningManager;
 
 class JsonResourceTest extends TestCase
