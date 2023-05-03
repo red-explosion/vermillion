@@ -1,14 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\VersionedSet;
 
-use Square\Vermillion\ApiVersion;
 use Square\Vermillion\Exceptions\UnknownVersionException;
 use Square\Vermillion\Formats\Numeric\NumericNormalizer;
 use Square\Vermillion\Schemes\Header\HeaderScheme;
 use Square\Vermillion\Tests\TestCase;
 use Square\Vermillion\VersionedSet;
-use Square\Vermillion\Schemes\VersioningScheme;
 use Square\Vermillion\VersioningManager;
 
 class ResolveTest extends TestCase
@@ -20,7 +20,7 @@ class ResolveTest extends TestCase
      * @return void
      * @dataProvider dataResolve
      */
-    public function testResolve(VersionedSet $set, $version, $expectedValue)
+    public function testResolve(VersionedSet $set, $version, $expectedValue): void
     {
         $value = $set->resolve($version);
         $this->assertEquals($expectedValue, $value);
@@ -32,7 +32,7 @@ class ResolveTest extends TestCase
      * @return void
      * @dataProvider dataResolveFails
      */
-    public function testResolveFails(VersionedSet $set, $version)
+    public function testResolveFails(VersionedSet $set, $version): void
     {
         $this->expectException(UnknownVersionException::class);
         $set->resolve($version);
@@ -45,7 +45,7 @@ class ResolveTest extends TestCase
      * @return void
      * @dataProvider dataResolveRange
      */
-    public function testResolveRange(VersionedSet $set, $version, array $expectedValues)
+    public function testResolveRange(VersionedSet $set, $version, array $expectedValues): void
     {
         $this->assertEquals($expectedValues, $set->resolveReversePath($version));
     }

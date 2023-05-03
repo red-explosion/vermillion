@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion;
 
 use InvalidArgumentException;
 use SplMaxHeap;
+use ReturnTypeWillChange;
 
 /**
  * @extends SplMaxHeap<VersionedItem>
@@ -24,7 +27,7 @@ class MaxHeap extends SplMaxHeap
      * @param $value
      * @return bool
      */
-    #[\ReturnTypeWillChange]
+    #[ReturnTypeWillChange]
     public function insert($value)
     {
         if (!$value instanceof VersionedItem) {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\Integration;
 
 use Square\Vermillion\Tests\TestCase;
@@ -10,14 +12,14 @@ class UrlGenerationTest extends TestCase
      * @dataProvider dataAwarenessInControllerAction
      * @param string $url
      */
-    public function testAwarenessInControllerAction(string $url)
+    public function testAwarenessInControllerAction(string $url): void
     {
         $response = $this->get($url);
         $response->assertStatus(200);
         $this->assertEquals('http://localhost' . $url, $response->getContent());
     }
 
-    public function testGenerateSpecificVersion()
+    public function testGenerateSpecificVersion(): void
     {
         $url = route('users.list', [
             'apiVersion' => '3',
@@ -25,7 +27,7 @@ class UrlGenerationTest extends TestCase
         $this->assertEquals('/api/v3/users', $url);
     }
 
-    public function testDefaultToStable()
+    public function testDefaultToStable(): void
     {
         $url = route('users.list', [], false);
         $this->assertEquals('/api/v6/users', $url);

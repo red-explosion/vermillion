@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\Formats;
 
 use Square\Vermillion\Exceptions\BadVersionFormatException;
@@ -23,7 +25,7 @@ abstract class FormatTestAbstract extends TestCase
      * @return void
      * @dataProvider dataNormalize
      */
-    public function testNormalize($toNormalize, $intValue, $stringValue)
+    public function testNormalize($toNormalize, $intValue, $stringValue): void
     {
         $version = $this->normalizer->normalize($toNormalize);
         $this->assertInstanceOf(ApiVersionAbstract::class, $version);
@@ -40,7 +42,7 @@ abstract class FormatTestAbstract extends TestCase
      * @return void
      * @dataProvider dataNormalizeFails
      */
-    public function testNormalizeFails($toNormalize, string $exceptionClass = null, string $exceptionMessage = null)
+    public function testNormalizeFails($toNormalize, string $exceptionClass = null, string $exceptionMessage = null): void
     {
         $this->expectException($exceptionClass ?? BadVersionFormatException::class);
         if ($exceptionMessage !== null) {
@@ -60,7 +62,7 @@ abstract class FormatTestAbstract extends TestCase
     /**
      * @return iterable
      */
-    abstract public  function dataNormalize(): iterable;
+    abstract public function dataNormalize(): iterable;
 
     /**
      * @return iterable

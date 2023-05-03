@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Square\Vermillion;
 
 use Closure;
-use Illuminate\Contracts\Routing\Registrar;
-use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
@@ -40,7 +38,7 @@ class VersioningServiceProvider extends ServiceProvider
         $scheme->boot($this->app->make(VersioningManager::class));
     }
 
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(
             path: __DIR__ . '/../config/versioning.php',
@@ -105,9 +103,7 @@ class VersioningServiceProvider extends ServiceProvider
 
         $app = $this->app;
         // Helper method that can be used in route files to grab
-        Router::macro('versioning', function () use ($app) {
-            return $app->make(RoutingHelper::class);
-        });
+        Router::macro('versioning', fn () => $app->make(RoutingHelper::class));
 
         Router::macro('versioned', function () use ($app) {
             // @phpstan-ignore-next-line
@@ -133,9 +129,7 @@ class VersioningServiceProvider extends ServiceProvider
                 ->normalize($version);
         });
 
-        $this->app->bind(ApiVersion::class, function () {
-            return $this->app->make(VersioningManager::class)->getActive();
-        });
+        $this->app->bind(ApiVersion::class, fn () => $this->app->make(VersioningManager::class)->getActive());
 
         Route::macro('apiVersion', function ($min, $action) use ($createRouteRef, $app): Route {
             // @phpstan-ignore-next-line

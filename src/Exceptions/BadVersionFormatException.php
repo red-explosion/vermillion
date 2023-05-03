@@ -1,8 +1,8 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Square\Vermillion\Exceptions;
-
-use RuntimeException;
 
 /**
  * Thrown by normalizers when they encounter a badly-formed version string.
@@ -11,5 +11,4 @@ use RuntimeException;
  */
 class BadVersionFormatException extends VersioningException
 {
-
 }

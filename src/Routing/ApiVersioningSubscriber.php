@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Square\Vermillion\Routing;
 
@@ -67,7 +69,7 @@ class ApiVersioningSubscriber
                 );
             }
             // For production, it should 404.
-            throw new NotFoundHttpException;
+            throw new NotFoundHttpException();
         }
     }
 

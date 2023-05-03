@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\PHPStan\MethodReflections;
 
 use PHPStan\Reflection\Native\NativeParameterReflection;

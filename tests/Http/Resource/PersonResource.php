@@ -1,13 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\Http\Resource;
 
-use Illuminate\Container\Container;
-use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Square\Vermillion\Traits\JsonResource\WithReverseMigrations;
 use Square\Vermillion\VersionedSet;
-use Square\Vermillion\VersioningManager;
 
 class PersonResource extends JsonResource
 {
@@ -25,7 +24,7 @@ class PersonResource extends JsonResource
             'display_name' => $person->name,
             'age' => $person->age,
             'nickname' => $person->nickName,
-            'hobbies' => $this->when(isset($person->hobbies), fn() => $person->hobbies),
+            'hobbies' => $this->when(isset($person->hobbies), fn () => $person->hobbies),
         ];
     }
 
@@ -33,12 +32,12 @@ class PersonResource extends JsonResource
      * @param VersionedSet $set
      * @return void
      */
-    protected static function reverseMigrations(VersionedSet $set)
+    protected static function reverseMigrations(VersionedSet $set): void
     {
-        $set->for('7', fn(array $v) => self::removeNickname($v))
-            ->for('5', fn(array $v, PersonResource $res, $req) => self::showHobbiesEvenIfEmpty($v, $res))
-            ->for('2', fn(array $v) => self::revertToName($v))
-            ->for('1', fn(array $v, PersonResource $res, $req) => $res->useProtectedMethods($v));
+        $set->for('7', fn (array $v) => self::removeNickname($v))
+            ->for('5', fn (array $v, PersonResource $res, $req) => self::showHobbiesEvenIfEmpty($v, $res))
+            ->for('2', fn (array $v) => self::revertToName($v))
+            ->for('1', fn (array $v, PersonResource $res, $req) => $res->useProtectedMethods($v));
     }
 
 

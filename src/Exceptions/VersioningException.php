@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Square\Vermillion\Exceptions;
 
@@ -11,5 +13,4 @@ use RuntimeException;
  */
 class VersioningException extends RuntimeException
 {
-
 }

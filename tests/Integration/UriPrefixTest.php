@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\Integration;
 
 use Square\Vermillion\Tests\TestCase;
@@ -13,7 +15,7 @@ class UriPrefixTest extends TestCase
      * @param int $status
      * @param string|null $content
      */
-    public function testUriVersions(string $method, string $uri, int $status, ?string $content = null)
+    public function testUriVersions(string $method, string $uri, int $status, ?string $content = null): void
     {
         $response = $this->call($method, $uri);
         $response->assertStatus($status);

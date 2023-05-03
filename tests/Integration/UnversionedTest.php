@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\Integration;
 
 use Square\Vermillion\Tests\TestCase;
@@ -11,13 +13,13 @@ class UnversionedTest extends TestCase
      *
      * @return void
      */
-    public function test404()
+    public function test404(): void
     {
         $response = $this->get('/');
         $response->assertStatus(404);
     }
 
-    public function testUnversioned()
+    public function testUnversioned(): void
     {
         $response = $this->get('/api/unversioned');
         $response->assertStatus(200);

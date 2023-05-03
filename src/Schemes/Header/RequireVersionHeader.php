@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Schemes\Header;
 
 use Illuminate\Http\Request;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Square\Vermillion\Exceptions\VersionMissingException;
 use Square\Vermillion\VersioningManager;
 

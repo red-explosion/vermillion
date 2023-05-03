@@ -6,8 +6,6 @@ namespace Square\Vermillion;
 
 use Square\Vermillion\Exceptions\NoMatchFoundException;
 use Square\Vermillion\Exceptions\UnknownVersionException;
-use Square\Vermillion\Exceptions\VersioningException;
-use Square\Vermillion\Formats\VersionNormalizer;
 
 class VersionedSet
 {
@@ -103,7 +101,7 @@ class VersionedSet
                 break;
             }
 
-           $matches[] = $item->getValue();
+            $matches[] = $item->getValue();
         }
 
         return $matches;

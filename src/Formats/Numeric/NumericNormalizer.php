@@ -1,11 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Square\Vermillion\Formats\Numeric;
 
 use Square\Vermillion\ApiVersion;
 use Square\Vermillion\Exceptions\BadVersionFormatException;
-use Square\Vermillion\Formats\Numeric\NumericVersion;
-use Square\Vermillion\Formats\VersionComparator;
 use Square\Vermillion\Formats\VersionNormalizer;
 
 /**

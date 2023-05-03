@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\Formats\Numeric;
 
 use Square\Vermillion\Formats\Numeric\NumericVersion;

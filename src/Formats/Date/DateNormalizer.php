@@ -1,11 +1,12 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Square\Vermillion\Formats\Date;
 
 use DateTime;
 use Square\Vermillion\ApiVersion;
 use Square\Vermillion\Exceptions\BadVersionFormatException;
-use Square\Vermillion\Formats\Date\DateVersion;
 use Square\Vermillion\Formats\VersionComparator;
 use Square\Vermillion\Formats\VersionNormalizer;
 
@@ -86,7 +87,7 @@ class DateNormalizer implements VersionNormalizer
      * @param DateTime $dateTime
      * @return void
      */
-    private function throwIfInvalidDate(string $version, DateTime $dateTime)
+    private function throwIfInvalidDate(string $version, DateTime $dateTime): void
     {
         $formatted = $dateTime->format('Y-m-d');
         if ($version !== $formatted) {

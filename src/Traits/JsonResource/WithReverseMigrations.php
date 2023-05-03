@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Traits\JsonResource;
 
 use Illuminate\Container\Container;
@@ -36,7 +38,7 @@ trait WithReverseMigrations
 
         return array_reduce(
             $migrations,
-            fn($accum, $migration) => $migration($accum, $this, $request),
+            fn ($accum, $migration) => $migration($accum, $this, $request),
             $array,
         );
     }
@@ -45,9 +47,9 @@ trait WithReverseMigrations
      * @param VersionedSet $migrations
      * @return void
      */
-    protected static function reverseMigrations(VersionedSet $migrations)
+    protected static function reverseMigrations(VersionedSet $migrations): void
     {
-        //
+
     }
 
     /**

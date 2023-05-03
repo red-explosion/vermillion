@@ -24,12 +24,10 @@ abstract class TestCase extends Orchestra
         $router
             ->middleware('api')
             ->prefix('api')
-            ->group(function (Router $router) {
-                $router->get('/unversioned', function () {
-                    return 'unversioned';
-                });
+            ->group(function (Router $router): void {
+                $router->get('/unversioned', fn () => 'unversioned');
 
-                $router->versioned()->group(function (Router $router) {
+                $router->versioned()->group(function (Router $router): void {
                     $router->get('/users', [UsersController::class, 'listUsers'])->name('users.list')
                         ->apiVersion('3', [UsersController::class, 'listUsersV3'])
                         ->apiVersion('4', [UsersController::class, 'listUsersV4'])

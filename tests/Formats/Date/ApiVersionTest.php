@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\Formats\Date;
 
 use Square\Vermillion\Formats\Date\DateVersion;
@@ -60,7 +62,7 @@ class ApiVersionTest extends FormatTestAbstract
         ];
     }
 
-    public function testNormalizingWithTimeDelay()
+    public function testNormalizingWithTimeDelay(): void
     {
         $normalizer = $this->createNormalizer();
 

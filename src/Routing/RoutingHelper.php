@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Square\Vermillion\Routing;
 
@@ -57,9 +59,7 @@ class RoutingHelper
      */
     public function unsupported(): callable
     {
-        return function () {
-            return new Response('', Response::HTTP_NOT_FOUND);
-        };
+        return fn () => new Response('', Response::HTTP_NOT_FOUND);
     }
 
     /**
@@ -67,8 +67,6 @@ class RoutingHelper
      */
     public function methodNotAllowed(): callable
     {
-        return function () {
-            return new Response('', Response::HTTP_METHOD_NOT_ALLOWED);
-        };
+        return fn () => new Response('', Response::HTTP_METHOD_NOT_ALLOWED);
     }
 }

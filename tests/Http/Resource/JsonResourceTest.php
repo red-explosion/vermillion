@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Square\Vermillion\Tests\Http\Resource;
 
 use Illuminate\Container\Container;
@@ -8,6 +10,7 @@ use Square\Vermillion\Formats\Numeric\NumericNormalizer;
 use Square\Vermillion\Schemes\Header\HeaderScheme;
 use Square\Vermillion\Tests\TestCase;
 use Square\Vermillion\VersioningManager;
+use JsonException;
 
 class JsonResourceTest extends TestCase
 {
@@ -33,9 +36,9 @@ class JsonResourceTest extends TestCase
     }
 
     /**
-     * @throws \JsonException
+     * @throws JsonException
      */
-    public function testLatestVersion()
+    public function testLatestVersion(): void
     {
         $resource = new PersonResource($this->person);
         $data = json_decode(json_encode($resource), true, 512, JSON_THROW_ON_ERROR);
@@ -50,10 +53,10 @@ class JsonResourceTest extends TestCase
     }
 
     /**
-     * @throws \JsonException
+     * @throws JsonException
      * @dataProvider dataVersions
      */
-    public function testVersions($version, array $expectedData)
+    public function testVersions($version, array $expectedData): void
     {
         $this->manager->setActive($version);
         $resource = new PersonResource($this->person);
@@ -65,7 +68,7 @@ class JsonResourceTest extends TestCase
     }
 
     /**
-     * @throws \JsonException
+     * @throws JsonException
      */
     public function dataVersions(): iterable
     {
