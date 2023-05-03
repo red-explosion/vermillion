@@ -115,7 +115,7 @@ When using `url_prefix` as versioning scheme, the URL generator will be automati
 route('users.list');  #=> /api/v3/users
 ```
 
-If there is no active version e.g. code executed within an unversioned route, the latest version will be used (defined in `config('versioning.latest')`).
+If there is no active version e.g. code executed within an unversioned route, the latest version will be used (defined in `config('vermillion.latest')`).
 
 If you wish to generate a route for another API version, specify the `apiVersion` option:
 
