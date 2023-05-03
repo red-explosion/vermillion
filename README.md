@@ -1,6 +1,6 @@
 # Vermillion 🍂
 
-[![PHP](https://github.com/square/vermillion/actions/workflows/php.yaml/badge.svg)](https://github.com/square/vermillion/actions/workflows/php.yaml)
+[![PHP](https://github.com/red-explosion/vermillion/actions/workflows/php.yaml/badge.svg)](https://github.com/red-explosion/vermillion/actions/workflows/php.yaml)
 
 An API versioning toolkit for Laravel applications️
 
@@ -36,7 +36,7 @@ An API versioning toolkit for Laravel applications️
 ### Installation
 
 ```bash
-composer install square/vermillion
+composer install red-explosion/vermillion
 ```
 
 ## Configuration
@@ -312,6 +312,6 @@ Add this line to your `phpstan.neon` file to fill static analysis gaps around `R
 
 ```yaml
 includes:
-  - ./vendor/square/vermillion/phpstan/extension.neon
+  - ./vendor/red-explosion/vermillion/phpstan/extension.neon
 ```
 
