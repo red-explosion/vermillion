@@ -1,8 +1,10 @@
 <?php
 
-namespace Shared\Tests;
+namespace Square\Vermillion\Tests\Integration;
 
-trait UriPrefixTestTrait
+use Square\Vermillion\Tests\TestCase;
+
+class UriPrefixTest extends TestCase
 {
     /**
      * @dataProvider dataUriVersions
@@ -209,5 +211,4 @@ trait UriPrefixTestTrait
             404,
         ];
     }
-
 }

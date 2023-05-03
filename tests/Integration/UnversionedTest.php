@@ -1,9 +1,8 @@
 <?php
 
-namespace Tests\Feature;
+namespace Square\Vermillion\Tests\Integration;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Square\Vermillion\Tests\TestCase;
 
 class UnversionedTest extends TestCase
 {

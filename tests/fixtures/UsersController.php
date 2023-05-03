@@ -1,14 +1,14 @@
 <?php
 
-namespace Shared\Controllers;
+declare(strict_types=1);
+
+namespace Square\Vermillion\Tests\fixtures;
 
 use Illuminate\Http\Request;
 use Square\Vermillion\ApiVersion;
-use Square\Vermillion\Formats\Date\DateNormalizer;
-use Square\Vermillion\Formats\Date\DateVersion;
 use Square\Vermillion\Formats\Numeric\NumericVersion;
 
-class UsersController extends Controller
+final class UsersController
 {
     /**
      * @param Request $request

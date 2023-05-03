@@ -42,6 +42,11 @@ class VersioningServiceProvider extends ServiceProvider
 
     public function register()
     {
+        $this->mergeConfigFrom(
+            path: __DIR__ . '/../config/versioning.php',
+            key: 'versioning',
+        );
+
         $this->configureCoreVersioningServices();
         $this->registerRoutingExtensions();
     }

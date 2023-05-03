@@ -1,10 +1,12 @@
 <?php
 
-namespace Shared\Controllers;
+declare(strict_types=1);
+
+namespace Square\Vermillion\Tests\fixtures;
 
 use Illuminate\Http\Response;
 
-class MembersController extends Controller
+final class MembersController
 {
     public function create(): Response
     {

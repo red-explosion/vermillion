@@ -1,8 +1,10 @@
 <?php
 
-namespace Shared\Tests;
+namespace Square\Vermillion\Tests\Integration;
 
-trait UrlGenerationTestTrait
+use Square\Vermillion\Tests\TestCase;
+
+class UrlGenerationTest extends TestCase
 {
     /**
      * @dataProvider dataAwarenessInControllerAction

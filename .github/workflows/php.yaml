@@ -39,8 +39,5 @@ jobs:
     - name: Run test suite
       run: ./vendor/bin/phpunit tests
 
-    - name: Run integration tests
-      run: ./run-integration-tests.sh
-
     - name: Run static analysis
       run: ./vendor/bin/phpstan analyze
