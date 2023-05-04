@@ -105,6 +105,7 @@ class VermillionServiceProvider extends ServiceProvider
         // Helper method that can be used in route files to grab
         Router::macro('versioning', fn () => $app->make(RoutingHelper::class));
 
+        // @phpstan-ignore-next-line
         Router::macro('versioned', fn () => $app->make(VersioningScheme::class)->router($this));
 
         Router::macro('unsupported', function () {
