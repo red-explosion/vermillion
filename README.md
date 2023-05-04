@@ -1,6 +1,6 @@
 # Vermillion 🍂
 
-[![PHP](https://github.com/red-explosion/vermillion/actions/workflows/php.yaml/badge.svg)](https://github.com/red-explosion/vermillion/actions/workflows/php.yaml)
+[![PHP](https://github.com/red-explosion/vermillion/actions/workflows/tests.yaml/badge.svg)](https://github.com/red-explosion/vermillion/actions/workflows/tests.yaml)
 
 An API versioning toolkit for Laravel applications️
 
