@@ -254,7 +254,7 @@ Specify your custom versioning scheme's FQCN in the `versioning` configuration:
 ```php
 <?php
 
-// config/versioning.php
+// config/vermillion.php
 
 return [
   'scheme' => App\Http\Versioning\MyCustomScheme::class,
@@ -268,7 +268,7 @@ return [
 
 2. You will need to implement a `RedExplosion\Vermillion\VersionNormalizer` class that is responsible for converting a version string to an instance of your custom `ApiVersion` sub-class. It MUST support your custom version strings as input, _as well as the custom `ApiVersion` sub-class_. It MUST throw `BadVersionFormatException` if it is provided an input that it cannot convert into a valid `ApiVersion` for according to your custom version format spec.
 
-3. Specify the FQCN of your normalizer as `versioning.normalizer` config value e.g.
+3. Specify the FQCN of your normalizer as `vermillion.normalizer` config value e.g.
 
 ```php
 <?php
