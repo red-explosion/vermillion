@@ -53,7 +53,7 @@ class ResolveTest extends TestCase
     /**
      * @return iterable
      */
-    public function dataResolve(): iterable
+    public static function dataResolve(): iterable
     {
         $normalizer = new NumericNormalizer();
         $scheme = new HeaderScheme();
@@ -104,7 +104,7 @@ class ResolveTest extends TestCase
     /**
      * @return iterable
      */
-    public function dataResolveFails(): iterable
+    public static function dataResolveFails(): iterable
     {
         $normalizer = new NumericNormalizer();
         $scheme = new HeaderScheme();
@@ -146,7 +146,7 @@ class ResolveTest extends TestCase
     /**
      * @return iterable
      */
-    public function dataResolveRange(): iterable
+    public static function dataResolveRange(): iterable
     {
         $normalizer = new NumericNormalizer();
         $scheme = new HeaderScheme();

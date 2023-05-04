@@ -52,7 +52,7 @@ abstract class FormatTestAbstract extends TestCase
     }
 
 
-    abstract protected function createNormalizer(): VersionNormalizer;
+    abstract protected static function createNormalizer(): VersionNormalizer;
 
     /**
      * @return class-string
@@ -62,10 +62,10 @@ abstract class FormatTestAbstract extends TestCase
     /**
      * @return iterable
      */
-    abstract public function dataNormalize(): iterable;
+    abstract public static function dataNormalize(): iterable;
 
     /**
      * @return iterable
      */
-    abstract public function dataNormalizeFails(): iterable;
+    abstract public static function dataNormalizeFails(): iterable;
 }

@@ -11,7 +11,7 @@ use RedExplosion\Vermillion\Formats\VersionNormalizer;
 
 class ApiVersionTest extends FormatTestAbstract
 {
-    protected function createNormalizer(): VersionNormalizer
+    protected static function createNormalizer(): VersionNormalizer
     {
         return new DateNormalizer();
     }
@@ -21,7 +21,7 @@ class ApiVersionTest extends FormatTestAbstract
         return DateVersion::class;
     }
 
-    public function dataNormalize(): iterable
+    public static function dataNormalize(): iterable
     {
         yield 'Past date: 1990-01-01' => [
             '1990-01-01',
@@ -41,7 +41,7 @@ class ApiVersionTest extends FormatTestAbstract
             '1990-01-12',
         ];
 
-        $v = new DateVersion('2022-01-01', 1640995200, $this->createNormalizer());
+        $v = new DateVersion('2022-01-01', 1640995200, self::createNormalizer());
 
         yield 'API version object' => [
             $v,
@@ -51,7 +51,7 @@ class ApiVersionTest extends FormatTestAbstract
 
     }
 
-    public function dataNormalizeFails(): iterable
+    public static function dataNormalizeFails(): iterable
     {
         yield 'Bad format: Y-d-m: 2022-31-12' => [
             '2022-31-12',

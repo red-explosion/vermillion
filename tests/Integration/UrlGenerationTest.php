@@ -33,7 +33,7 @@ class UrlGenerationTest extends TestCase
         $this->assertEquals('/api/v6/users', $url);
     }
 
-    public function dataAwarenessInControllerAction()
+    public static function dataAwarenessInControllerAction()
     {
         for ($v = 1; $v <= 7; $v++) {
             $randId = rand(1, 100);

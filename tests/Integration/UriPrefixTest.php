@@ -24,7 +24,7 @@ class UriPrefixTest extends TestCase
         }
     }
 
-    public function dataUriVersions()
+    public static function dataUriVersions()
     {
         // v1
         yield 'GET /users @ v1' => [

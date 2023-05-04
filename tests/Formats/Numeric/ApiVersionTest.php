@@ -11,7 +11,7 @@ use RedExplosion\Vermillion\Formats\VersionNormalizer;
 
 class ApiVersionTest extends FormatTestAbstract
 {
-    protected function createNormalizer(): VersionNormalizer
+    protected static function createNormalizer(): VersionNormalizer
     {
         return new NumericNormalizer();
     }
@@ -24,7 +24,7 @@ class ApiVersionTest extends FormatTestAbstract
     /**
      * @return iterable
      */
-    public function dataNormalize(): iterable
+    public static function dataNormalize(): iterable
     {
         yield [
             '1',
@@ -51,7 +51,7 @@ class ApiVersionTest extends FormatTestAbstract
         ];
     }
 
-    public function dataNormalizeFails(): iterable
+    public static function dataNormalizeFails(): iterable
     {
         yield 'negative number: -1' => [
             '-1',

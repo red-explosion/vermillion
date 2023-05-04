@@ -70,7 +70,7 @@ class JsonResourceTest extends TestCase
     /**
      * @throws JsonException
      */
-    public function dataVersions(): iterable
+    public static function dataVersions(): iterable
     {
         yield 'v8' => [
             '8',
