@@ -1,4 +1,4 @@
-name: tests
+name: static analysis
 
 on:
   push:
@@ -9,16 +9,13 @@ permissions:
   contents: read
 
 jobs:
-  tests:
+  phpstan:
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: true
-      matrix:
-        php: [ 8.1, 8.2 ]
-        laravel: [ 9.* ]
 
-    name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }}
+    name: Static Analysis
 
     steps:
       - name: Checkout the code
@@ -27,13 +24,12 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php }}
+          php-version: 8.2
           coverage: none
 
       - name: Install the dependencies
         run: |
-          composer require "illuminate/contracts:${{ matrix.laravel }}" --no-interaction --no-progress --no-update
           composer update --no-progress --prefer-dist --no-interaction
 
-      - name: Execute the tests
-        run: ./vendor/bin/phpunit tests
+      - name: Execute type checking
+        run: vendor/bin/phpstan analyse
